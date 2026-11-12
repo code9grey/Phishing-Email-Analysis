@@ -1,0 +1,27 @@
+====================================================================
+INDICATORS OF COMPROMISE (IOCs) - PHISHING EMAIL INVESTIGATION 02
+====================================================================
+Campaign Target: Banco Bradesco / Livelo Points Impersonation
+Date Observed: Tue, 19 Sep 2023 18:35:49 +0000 (UTC)
+Note: All network indicators have been defanged for safe handling.
+
+--------------------------------------------------------------------
+1. NETWORK & DOMAIN INDICATORS
+--------------------------------------------------------------------
+Phishing Domain:        blog1seguimentmydomaine2bra[.]me
+Phishing URL:           hxxps[://]blog1seguimentmydomaine2bra[.]me/
+Sender / Relay IP:      137[.]184[.]34[.]4
+Relay Resolve Host:     1627707[.]cloudwaysapps[.]com
+Spoofed Sender Domain:  atendimento[.]com[.]br
+Originating Hostname:   ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06
+
+--------------------------------------------------------------------
+2. EMAIL ARTIFACTS & HEADERS
+--------------------------------------------------------------------
+Spoofed From Address:   banco[.]bradesco[@]atendimento[.]com[.]br
+Return-Path Address:    root[@]ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06
+Reply-To Address:       root[@]ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06
+Subject Line:           CLIENTE PRIME - BRADESCO LIVELO: Seu cartão tem 92.990 pontos LIVELO expirando hoje!
+Message-ID:             <20230919183549.39DEA3F725@ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06>
+
+ 

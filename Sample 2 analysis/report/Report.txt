@@ -1,0 +1,65 @@
+Headers
+======================================
+Date: Tue, 19 Sep 2023 18:35:49 +0000 (UTC)
+Subject: CLIENTE PRIME - BRADESCO LIVELO: Seu cartão tem 92.990 pontos LIVELO expirando hoje!
+
+To: phishing@pot
+From: BANCO DO BRADESCO LIVELO<banco.bradesco@atendimento.com.br>
+
+Return-Path: root@ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06
+
+Reply-To: root@ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06
+
+Sender IP: 137.184.34.4
+Resolve Host: 1627707.cloudwaysapps.com
+
+Message-ID: <20230919183549.39DEA3F725@ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06>
+
+
+URLs
+======================================
+hxxps[://]blog1seguimentmydomaine2bra[.]me/
+
+
+Attachments
+======================================
+Attachment Name: None
+MD5:
+SHA1:
+SHA256:
+
+
+Description
+======================================
+This email appears to be from Banco Bradesco, a Portuguese bank that offer credit card services, informing the user that his credit card points will be expiring.
+
+This mail claims that the user will need to redeem Visa Infinite points in order to avoid losing the accumulated points. The points are earned through use of the card overtime and offer some benefits like discounts on card bill.
+
+Artifact Analysis
+======================================
+Sender Analysis:
+The FROM email address appears to be a spoofed email impersonation the bank.
+
+Additionally, the received headers indicates that the email originated from Cloudways, which is a cloud hosting service and do not have any affiliation with the bank. The return-path and reply-to emails indicate a virtual machine hosted on Cloudways servers.
+
+URL Analysis:
+After analysing the url with virustotal, urlvoid and urlscan.io, it was observed that the url has been taken down and is no longer active. This indicates that the website was malicious and action has been taken against it. 
+
+Verdict
+======================================
+Due to the sender being unaffiliated with Amazon, the email is a clear impersonation attempt.
+
+Additionally, after analyzing the URL contained in the mail, it was deemed to be malicious.
+
+Therefore the email is to classified as a case of phishing.
+
+Defense Actions
+======================================
+1. Network & Perimeter Defenses
+Block the originating server IP (137.184.34.4) at your inbound firewall and email gateway, and filter out lures combining Brazilian banking terms (e.g., Bradesco, Livelo) with urgent expiration phrases. Additionally, enforce strict SPF, DKIM, and DMARC checks to reject brand impersonations sent from unverified cloud infrastructure like DigitalOcean or Cloudways.
+
+2. Threat Intelligence & Indicator Blocking
+Add the phishing domain (blog1seguimentmydomaine2bra.me) to your web proxies, DNS sinkholes, and URL blocklists to prevent access. Simultaneously, submit an abuse report to Cloudways/DigitalOcean with the sender IP (137.184.34.4), timestamp, and email headers so the malicious droplet is terminated.
+
+ 
+
