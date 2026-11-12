@@ -1,0 +1,67 @@
+Headers
+======================================
+Date: Fri, 16 Sep 2022 19:20:13 
+Subject: Re: Reminder: [Activity Report] Your account is sign in on a new device. Friday, September 16, 2022 #[636274168]
+
+To: asmith@hotmail.com
+From: cafepress@mail.cafepress.com
+
+Return-Path: msprvs1=XjGVrJidPKaSN=bounces-098020-32419@tbh51blx.imdreampores.ovh
+
+Sender IP: 209.85.221.104
+Resolve Host: mail-wr1-f104.google.com 
+
+Message-ID: <Ti6MiLxTCWMiAH1sP7JxbGrEJIqKsD3Nv4CKIa8Mwrs@mail-pf1-f420.googlegroups.com>
+
+
+URLs
+======================================
+hxxps[://]cabinetlekagni[.]com/
+
+
+Attachments
+======================================
+Attachment Name: None
+MD5:
+SHA1:
+SHA256:
+
+
+Description
+======================================
+This email appears to be from Amazon Prime support, informing the user that a suspicious login attempt was made on the recipient's account.
+
+The mail claims that a device with the IP: 144.68.119.02 tried to login to the account on Friday, September 16, 2022 7:20 PM, from the United States and is urging the user to click a link to verify the user's account.
+
+
+Artifact Analysis
+======================================
+Sender Analysis:
+The From email appears to be originating from a domain unrelated to Amazon even though it claims it claims to be legit.
+
+Additionally, the received headers indicates that the email originated from a google server and the Reply-to header indicates that OVH cloud hosting technologies were used, neither which are affiliated with Amazon.
+
+URL Analysis:
+After analysis of the URL using virustotal and phishtank, it was observed that the URL redirected the user to a phishing site. Therefore, the URL is malicious.
+
+Verdict
+======================================
+Due to the sender being unaffiliated with Amazon, the email is a clear impersonation attempt.
+
+Additionally, after analyzing the URL contained in the mail, it was deemed to be malicious.
+
+Therefore the email is to classified as a case of phishing.
+
+Defense Actions
+======================================
+1. Network & Perimeter Defenses
+Block the sender (mail.cafepress.com) and return-path (tbh51blx.imdreampores.ovh) domains at your email gateway. Configure rules to flag brand impersonations when domain validation fails or when the sender, Google relay IP (209.85.221.104), and OVH routing misalign, and filter out urgent login-alert keywords paired with external links.
+
+2. Threat Intelligence & Indicator Blocking
+Add the phishing URL (cabinetlekagni.com) to your web proxies, DNS sinkholes, and URL blocklists to block user access. Simultaneously, report both cabinetlekagni.com and ovh.com to their hosting providers to get the malicious infrastructure taken down.
+
+3. Endpoint & Identity Protection
+For users who interacted with the email, check EDR and proxy logs for connections to cabinetlekagni.com or the lure's suspicious IP (144.68.119.02). Immediately reset their passwords, revoke active sessions, and enforce phishing-resistant MFA (FIDO2/WebAuthn).
+
+4. Incident Response & Triage Best Practices
+Sweep all mailboxes using the Message-ID (<Ti6MiLxTCWMiAH1sP7JxbGrEJIqKsD3Nv4CKIa8Mwrs@mail-pf1-f420.googlegroups.com>) or subject line to quarantine or delete delivered copies. Use this campaign in security training to teach staff how to spot urgent, fake login alerts before clicking external links.
